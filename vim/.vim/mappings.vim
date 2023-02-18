@@ -1,5 +1,5 @@
 nnoremap Y y$			"Copy from the current column to the end of line
-inoremap a' <Esc><S-a>
+inoremap a' <Esc><S-a>|	"Go to the end of line in Insert mode
 
 "Quit
 nnoremap <Leader>qa :qa!<Cr>
@@ -19,28 +19,33 @@ cnoremap <C-j> <Down>
 cnoremap <C-h> <Left>
 cnoremap <C-l> <Right>
 
+"Netrw
+nnoremap <Leader>e :Lex<Cr>
+nnoremap - :e %:h<Cr>|	"Open the current directory in Netrw
+
 " ******************************************************
 " Sets
 " ******************************************************
-nnoremap <Leader>sl :set list<Enter>
-nnoremap <Leader>snl :set nolist<Enter>
+nnoremap <Leader>l :set list<Cr>
+nnoremap <Leader>nl :set nolist<Cr>
 
 " ******************************************************
 " Key to Key
 " ******************************************************
 nnoremap ; :
 vnoremap ; :
+cnoremap vt vert
 vnoremap <Leader><Leader> <Esc>
 
 " ******************************************************
-" Bracekts and Quotes
+" Brackets and Quotes
 " ******************************************************
 "Enclose word with brackets or quotes
-nnoremap "iw ciw""<Esc>hpl
-nnoremap 'iw ciw''<Esc>hpl
-nnoremap (iw ciw()<Esc>hpl
-nnoremap [iw ciw[]<Esc>hpl
-nnoremap {iw ciw{}<Esc>hpl
+nnoremap sw" ciw""<Esc>hpl
+nnoremap sw' ciw''<Esc>hpl
+nnoremap sw( ciw()<Esc>hpl
+nnoremap sw[ ciw[]<Esc>hpl
+nnoremap sw{ ciw{}<Esc>hpl
 
 nnoremap "aw caw""<Esc>hpl
 nnoremap 'aw caw''<Esc>hpl
@@ -73,22 +78,3 @@ nnoremap <Up> <C-w>+
 nnoremap <Down> <C-w>-
 nnoremap <Left> <C-w><
 nnoremap <Right> <C-w>>
-
-" ******************************************************
-" HTML
-" ******************************************************
-" Auto close html tag then insert new line between the tag pair
-inoremap ><Enter> ><Esc>F<lyt>o</<C-r>"><Esc>O<Tab>
-
-"Auto close html tag then insert mode between the tag pair
-inoremap ><Tab> ><Esc>F<lyt>A</<C-r>"><Esc>F<i
-" ><Esc>	type ">" then escape
-" F<		find "<" backwards
-" l			One character to the right 
-" yt>		Yank until >
-" A			insert mode at the end of line
-" </		Type </
-" <C-r>"	Paste in insert mode
-" ><Esc>	Type > then escape
-" F<		Find < backwards
-" i			Insert mode
