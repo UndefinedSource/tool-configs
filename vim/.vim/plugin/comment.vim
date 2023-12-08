@@ -1,8 +1,10 @@
 function AddComment()
 	let fileType = {
-		\ 'vim': '"',
-		\ 'python': '#',
-		\ 'java': '//'
+		\ 'java':		'//',
+		\ 'javascript': '//',
+		\ 'typescript': '//',
+		\ 'python':		'#',
+		\ 'vim':		'"',
 		\ }
 
 	if has_key(fileType, &ft)
@@ -16,5 +18,8 @@ function RemoveComment()
 	exe 'norm xx'
 endfunction
 
+" Comment selected lines by <Leader>//
 vnoremap <leader>// :call AddComment()<Enter>
+
+" Uncomment selected lines by <Leader>??
 vnoremap <leader>?? :call RemoveComment()<Enter>

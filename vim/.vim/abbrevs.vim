@@ -1,6 +1,8 @@
-" Command-line abbreviations
-ca msg messages		"command-line abbrev
-ca src so %			"so % to refresh current file
-ca vp ~/.vim/
-ca vrc ~/.vimrc
-ca te tabe
+" Directory Path
+cnorea vrc tabe ~/.vimrc
+cnorea vp ~/.vim/
+
+" Opening Tab
+cnorea te tabe
+cnorea tv tabe ~/.vimrc
+cnorea th tab help| "Open Help [command] in a new tab
