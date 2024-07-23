@@ -1,7 +1,14 @@
-nnoremap d_ "_dd | " Delete the current line but do not store it in the clipboard 
+" For Java
+inoremap sysout System.out.println();<Esc>hi
 
-nnoremap Y y$			" Copy from the current column to the end of line
-inoremap a' <Esc><S-a>| " Go to the end of line in Insert mode
+" Delete the current line but do not store it in the clipboard 
+nnoremap d_ "_dd
+
+" Copy from the current column to the end of line
+nnoremap Y y$
+
+" Go to the end of line in Insert mode
+inoremap a' <Esc><S-a>
 
 " Cursor Navigation in Command-line Mode
 cnoremap <C-k> <Up>
@@ -68,6 +75,15 @@ inoremap ` ``<Left>
 inoremap ( ()<Left>
 inoremap [ []<Left>
 inoremap { {}<Left>
+
+" Do not insert close bracket if character is entered twice
+inoremap "" "
+inoremap '' '
+inoremap `` `
+inoremap () (
+inoremap [] [
+inoremap {} {
+
 
 " ******************************************************
 " Window
