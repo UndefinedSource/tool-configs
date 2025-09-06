@@ -1,5 +1,5 @@
 function Compile()
-	"   Key: extension name
+	" Key: extension name
 	" Value: compiler shell command
 
 	let compilers = #{
