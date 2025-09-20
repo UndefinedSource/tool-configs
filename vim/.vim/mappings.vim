@@ -44,8 +44,6 @@ nnoremap <Leader>qq :q<Cr>
 " ******************************************************
 " Key to Key
 " ******************************************************
-nnoremap ; :
-vnoremap ; :
 cnoremap vt vert
 vnoremap <Leader><Leader> <Esc>
 
